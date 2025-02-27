@@ -116,11 +116,29 @@
         <br />
 
         <hr />
-        <button>Find Your Coffee</button>
+        <button class="button">Find Your Coffee</button>
         <span class="built-by">Coded by <a href="https://www.shecodes.io/graduates/89162-nigesty-hagos" target="_blank"
                 class="contact-me">
                 Nigesty </a>With HTML, CSS, JavaScript</span>
     </div>
+    <script>
+        function coffeeViaEmail() {
+            let name = prompt("What is your name?");
+            let country = prompt("What country are you from?");
+            let emailAddress = prompt("What is your email address?");
+            country = country.toLocaleLowerCase();
+            country = country.trim();
+            if (country === "london") {
+                alert(`Hello ${name}, we'll get back to you with some Costa Coffee options via email`);
+            }
+            else {
+                alert(`Thank you ${name}! we'll be in touch by email`);
+            }
+        }
+
+        let button = document.querySelector(".button");
+        button.addEventListener("click", coffeeViaEmail);
+    </script>
 </body>
 
 </html>
